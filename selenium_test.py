@@ -1,0 +1,15 @@
+from selenium import webdriver
+import time
+browser = webdriver.Firefox()
+browser.get(r'http://124.207.182.50:8234/bdas3.0_js')
+browser.find_element_by_name(r'UserName').clear()
+browser.find_element_by_name(r'UserName').send_keys('sq')
+browser.find_element_by_name(r'PASSWORD').clear()
+browser.find_element_by_name(r'PASSWORD').send_keys('1234')
+time.sleep(30)
+browser.switch_to.frame('myframe')
+browser.find_element_by_xpath("/html/body/div[2]/div/div/div/div[1]/span[1]/input[1]").send_keys('砂礓河大桥')
+browser.find_element_by_xpath("/html/body/div[2]/div/div/div/div[1]/span[1]/span/a").click()
+wait.until(ExceptedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/div/div/div[2]/div[1]/div[2]/div/table/tbody/tr[1]/td[2]/div/input")))
+browser.find_element_by_xpath("/html/body/div[2]/div/div/div/div[2]/div[1]/div[2]/div/table/tbody/tr[1]/td[2]/div/input").click()
+browser.find_element_by_xpath("/html/body/div[2]/div/div/div/div[1]/a[9]/span/span[1]").click()
